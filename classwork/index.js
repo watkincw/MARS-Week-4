@@ -112,7 +112,7 @@
 
 // !!! ARRAYS !!!
 
-let names = ['John', 'Mike', 'Peter', 'Kevin'];
+// let names = ['John', 'Mike', 'Peter', 'Kevin'];
 
 // console.log(names[1]);
 
@@ -287,3 +287,68 @@ let names = ['John', 'Mike', 'Peter', 'Kevin'];
 // console.log(person3);
 
 // console.log(person1.getInfo());
+
+
+// !!! 'this' KEYWORD !!!
+
+
+// function f() {
+//     return this;
+// };
+
+// console.log(f());
+
+// let person = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     f: function getDetail() {
+//         return this.firstName + ' ' + this.lastName;
+//     },
+//     foo: function() {
+//         const baz = () => this;
+//         return baz();
+//     },
+//     bar: () => this
+// };
+
+// console.log(person.foo);
+// console.log(person.bar);
+
+
+
+class Person {
+    #name
+    #age
+    constructor(name, age) {
+        this.#name = name;
+        this.#age = age;
+    }
+    set name(name) {
+        console.log('Setter method is called...');
+        if (name === '') {
+            console.log('Username cannot be empty.');
+        } else {
+            this.#name = name;
+        }
+    }
+    get name() {
+        return this.#name;
+    }
+    set age(age) {
+        if (age === '') {
+            console.log('Age cannot be left blank');
+        } else {
+            this.#age = age;
+        }
+    }
+    get age() {
+        return this.#age;
+    }
+};
+
+const person1 = new Person('Tony', 53);
+console.log(person1.age);
+console.log('Before: ' + person1.name + ', ' + person1.age);
+person1.name = 'Dave';
+person1.age = 36;
+console.log('After: ' + person1.name + ', ' + person1.age);

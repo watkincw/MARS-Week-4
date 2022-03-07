@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>'this'</title>
+</head>
+<body>
+    <!-- <p id="my-el">Paragraph</p> -->
+    <script src="index.js">
+        // const el = document.getElementById('my-el');
+        // el.addEventListener('click', function() {
+        //     console.log(this.innerHTML);
+        // });
+
+        let employee = {
+            name: 'test',
+            age: 34,
+            salary: 10000
+        };
+        let manager = {
+            location: 'WI',
+            verticle: 'Telecom'
+        };
+        manager.__proto__ = employee;
+        // because employee is the prototype of manager, manager has the name, age and salary properties as well as the others assigned to it
+        console.log(manager.salary);
+
+        // testing 'new Person' from index.js
+        console.log(person1);
+    </script>
+</body>
+</html>
