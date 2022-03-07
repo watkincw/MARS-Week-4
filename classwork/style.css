@@ -1,0 +1,87 @@
+a {
+    text-decoration: none;
+    color: #007700;
+}
+
+caption {
+    background-color: blueviolet;
+}
+
+p {
+    text-align: center;
+}
+
+#amt {
+    direction: rtl;
+}
+
+legend {
+    text-transform: capitalize;
+}
+
+#form1 {
+    text-shadow: 2px 2px 5px red;
+}
+
+* {
+    background-color: aqua;
+}
+
+.fontred {
+    color: red;
+}
+
+.fontcaps {
+    text-transform: uppercase;
+}
+
+div.fontgreen {
+    color: green;
+}
+
+ol, p {
+    text-transform: lowercase;
+}
+
+p.fontgreen {
+    color: green;
+    font-style: italic;
+}
+
+div p {
+    background-color: blueviolet;
+    font-style: normal;
+}
+
+span > p {
+    font-style: italic;
+}
+
+div + p {
+    font-size: x-small;
+}
+
+p ~ div {
+    background-color: yellowgreen;
+}
+
+/* this is for table tag */
+table {
+    margin: auto;
+}
+
+div.fontstyle {
+    background-color: aliceblue;
+    font: oblique small-caps 2em Sofia;
+}
+
+#color {
+    border: 2px blue dotted;
+}
+
+body {
+    background-image: url(bg-image/birds.jpg);
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-attachment: fixed;
+}

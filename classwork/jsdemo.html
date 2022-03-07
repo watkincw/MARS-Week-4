@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+
+    <title>JS Demo</title>
+</head>
+<body>
+    <p id="txtId">Before the script...</p>
+
+    <br>
+
+    Username: <input type="text" id="uname" size="20">
+    
+    <br><br>
+    
+    Password: <input type="password" id="pwd" size="20">
+    
+    <br><br>
+
+    <button onclick="changeColor()">Click here...</button>
+
+    <br><br>
+
+    First Number: <input type="number" id="first" size="20">
+
+    <br><br>
+
+    Second Number: <input type="number" id="second" size="20">
+
+    <br><br>
+    
+    Result:  <input type="number" id="result" size="20">
+
+    <br><br>
+
+    <button onclick="getSum()">Click here...</button>
+
+
+</body>
+<script>
+    console.log("Executing script from within the HTML...");
+
+    
+    function changeColor() {
+        // select value of target feilds
+        var username = document.getElementById('uname').value;
+        var password = document.getElementById('pwd').value;
+
+        // if either of those feilds are plank
+        if (username == '' || password == '') {
+            // tell them
+            alert('Username and Password are required!')
+            // restart and DONT run the rest
+            return
+        // if neither values were left blank(if neither of the conditions are met(line 36))
+        } else {
+            alert('Welcome ' + name);
+        }
+
+        document.body.style.backgroundColor = 'cyan';
+        document.getElementById('txtId').innerHTML = 'After Button Clicked';
+    }
+
+    function getSum() {
+        var a, b, c;
+
+        console.log('a = ' + a);
+        console.log('b = ' + b);
+        console.log('c = ' + c);
+        
+        a = Number(document.getElementById('first').value);
+        b = Number(document.getElementById('second').value);
+        
+        c = a + b;
+
+        console.log('a = ' + a);
+        console.log('b = ' + b);
+        console.log('a = ' + c);
+
+        document.getElementById('result').value = c;
+    }
+
+</script>
+</html>

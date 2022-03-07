@@ -1,0 +1,146 @@
+.parent {
+    border: 2px blue dotted;
+}
+
+.box {
+    display: inline;
+    background: red;
+    height: 100px;
+    width: 100px;
+}
+
+#two {
+    background: green;
+    top: 20px;
+}
+
+.overflow {
+    background-color: coral;
+    border: 1px solid;
+    width: 200px;
+    height: 100px;
+    overflow: auto;
+}
+
+img {
+    width: 150px;
+    height: 100px;
+    float: right;
+}
+
+#div4 {
+    float: right;
+    padding: 10px;
+    border: 2px solid;
+}
+
+#div5 {
+    padding: 10px;
+    border: 2px solid;
+    clear: right;
+}
+
+#noclear {
+    border: 2px solid;
+    overflow: auto;
+}
+
+#img1 {
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+}
+
+#box1 {
+    margin-top: 100px;
+    border: 2px solid;
+    padding: 20px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 1em;
+}
+
+.cell {
+    background-color: lightgreen;
+    padding: 1em;
+}
+
+.flex {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.flex > .cell {
+    flex-grow: 3;
+}
+
+.flex > .cell:nth-child(2) {
+    flex-grow: 4;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1em;
+    /* grid-template-columns: repeat(auto-fit); */
+}
+
+.animation {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-color: rgb(148, 148, 212);
+    animation-name: new-animation;
+    animation-duration: 8s;
+    /* animation-iteration-count: 4; */
+    animation-iteration-count: infinite;
+}
+
+@keyframes my-animation {
+    0% {
+        background-color: blue;
+    }
+    25% {
+        background-color: green;
+    }
+    50% {
+        background-color: red;
+    }
+    100% {
+        background-color: lightsalmon;
+    }
+}
+
+@keyframes new-animation {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 500px;
+    }
+}
+
+#div11 {
+    animation-timing-function: linear;
+}
+
+#div22 {
+    animation-timing-function: Ease;
+}
+
+#div33 {
+    animation-timing-function: Ease-In;
+}
+
+#div44 {
+    animation-timing-function: Ease-Out;
+}
+
+#div55 {
+    animation-timing-function: Ease-In-Out;
+}
+

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Calculator</title>
+</head>
+<body>
+    <table border="1">
+        <h1 class="tableCap">
+            Simple Calculator
+        </h1>
+        <p class="tableRule">
+            Click the '=' button for the answer!
+        </p>
+
+        <!-- Add -->
+        <tr>
+            <td>
+                <p>
+                    Add:
+                </p>
+            </td>
+            <td>
+                <input type="number" id="addOne">
+            </td>
+            <td>
+                <p class="sign">
+                    +
+                </p>
+            </td>
+            <td>
+                <input type="number" id="addTwo">
+            </td>
+            <td>
+                <button onclick="sum()">=</button> <input type="number" id="sum">
+            </td>
+        </tr>
+
+        <!-- Subtract -->
+        <tr>
+            <td>
+                <p>
+                    Subtract: 
+                </p>
+            </td>
+            <td>
+                <input type="number" id="subtractOne">
+            </td>
+            <td>
+                <p class="sign">
+                    -
+                </p>
+            </td>
+            <td>
+                <input type="number" id="subtractTwo">
+            </td>
+            <td>
+                <button onclick="dif()">=</button> <input type="number" id="dif">
+            </td>
+        </tr>
+
+        <!-- Multiply -->
+        <tr>
+            <td>
+                <p>
+                    Multiply:
+                </p>
+            </td>
+            <td>
+                <input type="number" id="multiplyOne">
+            </td>
+            <td>
+                <p class="sign">
+                    x
+                </p>
+            </td>
+            <td>
+                <input type="number" id="multiplyTwo">
+            </td>
+            <td>
+                <button onclick="multiply()">=</button> <input type="number" id="multiply">
+            </td>
+        </tr>
+
+        <!-- Divide -->
+        <tr>
+            <td>
+                <p>
+                    Divide:
+                </p>
+            </td>
+            <td>
+                <input type="number" id="divideOne">
+            </td>
+            <td>
+                <p class="sign">
+                    ÷
+                </p>
+            </td>
+            <td>
+                <input type="number" id="divideTwo">
+            </td>
+            <td>
+                <button onclick="divide()">=</button> <input type="number" id="divide">
+            </td>
+        </tr>
+
+        <div class="hide" id="hidden">
+            <h3>Please input numbers into BOTH feilds!</h3>
+        </div>
+
+    </table>
+
+</body>
+
+<script>
+
+    // !!! if the text is too long to see without scrolling to the side !!!
+    // !!! Press 'Alt' + 'z' !!! (press it a few times if its not clear what is happening; watch the line numbers on the left for the lines that you notice changing)
+
+    // Add functionality
+    function sum() {
+        // get first and second input value
+        let num1 = Number(document.getElementById('addOne').value);
+        let num2 = Number(document.getElementById('addTwo').value);
+
+        // if either field is blank, tell them they cant be
+        if (num1 == '' || num2 == '') {
+            // get, or in other words 'target' or 'select', the hidden div on line ~112 with the ID of 'hidden'. The div is hidden using CSS. Check the CSS file to see how I did this with the 'hide' class
+            let hidden = document.getElementById('hidden');
+
+            // remove 'hide' class from list of classes the div has assigned to it
+            hidden.classList.remove('hide');
+            
+            // setTimeout(function(), delay in milliseconds) delays what comes next before moving forward with the rest of the function, then completes a task specified with another function after the specified time 
+            setTimeout(function() {
+                // re-add 'hide' class to list of classes the div has assigned to it after 3000 milliseconds(specified at the end of the function)
+                hidden.classList.add('hide');
+            }, 3000);
+
+            // 'return' exits the entire sum fuction, not allowing what comes next to execute
+            return
+        }
+
+        // add them together
+        let total = num1 + num2;
+        // round to 2 decimal places, if neccessary
+        result = Math.round(total*100)/100;
+
+        // dispaly sum in results box
+        document.getElementById('sum').value = result;
+    }
+
+    // Subtract functionality
+    function dif() {
+        // get first and second input value
+        let num1 = Number(document.getElementById('subtractOne').value);
+        let num2 = Number(document.getElementById('subtractTwo').value);
+
+        // if either field is blank, tell them they cant be
+        if (num1 == '' || num2 == '') {
+            // get, or in other words 'target' or 'select', the hidden div on line ~112 with the ID of 'hidden'. The div is hidden using CSS. Check the CSS file to see how I did this with the 'hide' class
+            let hidden = document.getElementById('hidden');
+
+            // remove 'hide' class from list of classes the div has assigned to it
+            hidden.classList.remove('hide');
+            
+            // setTimeout(function(), delay in milliseconds) delays what comes next before moving forward with the rest of the function, then completes a task specified with another function after the specified time 
+            setTimeout(function() {
+                // re-add 'hide' class to list of classes the div has assigned to it after 3000 milliseconds(specified at the end of the function)
+                hidden.classList.add('hide');
+            }, 3000);
+
+            // 'return' exits the entire sum fuction, not allowing what comes next to execute
+            return
+        }
+
+        // subtract
+        let total = num1 - num2;
+        // round to 2 decimal places, if neccessary
+        result = Math.round(total*100)/100;
+
+        // dispaly sum in results box
+        document.getElementById('dif').value = result;
+    }
+
+    // Multiply functionality
+    function multiply() {
+        // get first and second input value
+        let num1 = Number(document.getElementById('multiplyOne').value);
+        let num2 = Number(document.getElementById('multiplyTwo').value);
+
+        // if either field is blank, tell them they cant be
+        if (num1 == '' || num2 == '') {
+            // get, or in other words 'target' or 'select', the hidden div on line ~112 with the ID of 'hidden'. The div is hidden using CSS. Check the CSS file to see how I did this with the 'hide' class
+            let hidden = document.getElementById('hidden');
+
+            // remove 'hide' class from list of classes the div has assigned to it
+            hidden.classList.remove('hide');
+            
+            // setTimeout(function(), delay in milliseconds) delays what comes next before moving forward with the rest of the function, then completes a task specified with another function after the specified time 
+            setTimeout(function() {
+                // re-add 'hide' class to list of classes the div has assigned to it after 3000 milliseconds(specified at the end of the function)
+                hidden.classList.add('hide');
+            }, 3000);
+
+            // 'return' exits the entire sum fuction, not allowing what comes next to execute
+            return
+        }
+
+        // multiply
+        let total = num1 * num2;
+        // round to 2 decimal places, if neccessary
+        result = Math.round(total*100)/100;
+
+        // dispaly total in results box
+        document.getElementById('multiply').value = result;
+    }
+
+    // Divide functionality
+    function divide() {
+        // get first and second input value
+        let num1 = Number(document.getElementById('divideOne').value);
+        let num2 = Number(document.getElementById('divideTwo').value);
+
+        // if either field is blank, tell them they cant be
+        if (num1 == '' || num2 == '') {
+            // get, or in other words 'target' or 'select', the hidden div on line ~112 with the ID of 'hidden'. The div is hidden using CSS. Check the CSS file to see how I did this with the 'hide' class
+            let hidden = document.getElementById('hidden');
+
+            // remove 'hide' class from list of classes the div has assigned to it
+            hidden.classList.remove('hide');
+            
+            // setTimeout(function(), delay in milliseconds) delays what comes next before moving forward with the rest of the function, then completes a task specified with another function after the specified time 
+            setTimeout(function() {
+                // re-add 'hide' class to list of classes the div has assigned to it after 3000 milliseconds(specified at the end of the function)
+                hidden.classList.add('hide');
+            }, 3000);
+
+            // 'return' exits the entire sum fuction, not allowing what comes next to execute
+            return
+        }
+
+        // divide
+        let total = num1 / num2;
+        // round to 2 decimal places, if neccessary
+        result = Math.round(total*100)/100;
+
+        // dispaly sum in results box
+        document.getElementById('divide').value = result;
+    }
+    
+</script>
+
+</html>

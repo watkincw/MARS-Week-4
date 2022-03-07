@@ -1,0 +1,249 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>New Page</title>
+
+        <style>
+            h1 {
+                color: blue;
+            }
+            #type1 {
+                accent-color: green;
+            }
+        </style>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+        <a href = "#section1" target="_default">go to google</a>
+        
+        <div id="color">
+            <h4>This is to demonstrate color schemes</h4>
+        </div>
+
+        <p id="section1" style="color: green;background-color: black;">
+            This paragraph is for &nbsp;&nbsp;&nbsp;&nbsp; section 1
+        </p>
+
+        <div class="fontred">
+            <h3>
+                this is first div to demonstrate css
+            </h3>
+            <span>
+                <p>
+                    paragraph one inside a div
+                </p>
+            </span>
+            <p>
+                Paragraph two inside a div
+            </p>
+        </div>
+
+        <div class="fontgreen">
+            <h3>
+                this is second div to demonstrate css
+            </h3>
+        </div>
+        <p class="fontgreen">
+            this is a new paragraph
+        </p>
+
+        <table border="1" class="fontred fontcaps">
+            <caption>Employee Details</caption>
+            <tr>
+                <th colspan="2">Name</th>
+                <th>Address</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td rowspan="2">John</td>
+                <td rowspan="3">Brown</td>
+                <td>Main St</td>
+                <td>Chicago</td>
+            </tr>
+            <tr>
+                <!-- <td>Brown</td> -->
+                <td>Second St</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Jake</td>
+                <td>Third St</td>
+                <td>Los Angelos</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <!-- Ordered List -->
+        <ol>
+            <li>Tea</li>
+            <ol type="a">
+                <li>green tea</li>
+            </ol>
+            <li>Coffee</li>    
+            <li>Milk</li>
+        </ol>
+
+        <ul type="square">
+            <li>Tea</li>
+            <li>Coffee</li>    
+            <li>Milk</li>
+        </ul>
+
+        <dl>
+            <dt>Coffee</dt>
+            <dd>--cold coffee</dd>
+            <dd>--expensive</dd>
+            <dt>Tea</dt>
+            <dd>--green tea</dd>
+            <dd>--Cheap</dd>
+        </dl><br>
+
+        <h1 id="form1">HTML Form:</h1>
+        
+        <form action="home.html" method="post">
+           
+            <table>
+           
+                <tr>
+                    <td>
+                        <label for="uname">User Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="uname" name="uname" required/>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <label for="pwd">Password:</label>
+                    </td>
+                    <td>
+                        <input type="password" id="pwd" name="pwd" placeholder="enter password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email" placeholder="enter email" />
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                        <label for="add">Address:</label>
+                    </td>
+                    <td>
+                        <textarea id="add" ></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" id="type1" name="empType" value ="Regular" checked>
+                    </td>
+                    <td>
+                        <label for="type1">Regular</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="type2" name="empType" value ="PartTime" >
+                    </td>
+                    <td>
+                        <label for="type2">Part Time</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <input type="checkbox" id = "city1" name = "city1" value = "NewYork" checked>
+                    </td>
+                    <td>
+                        <label for="city1">New York</label>
+                    </td>
+                    <td> 
+                        <input type="checkbox" id = "city2" name = "city2" value = "Dallas">
+                    </td>
+                    <td>
+                        <label for="city2">Dallas</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="country">Select Country</label>
+                    </td>
+                    <td>
+                        <select id="country" name="countrySelection" >
+                            <option></option>
+                            <option value="usa">USA</option>  
+                            <option value="india">India</option>  
+                            <option value="britain">UK</option>    
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="file">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input list="browser">
+                        <datalist id="browser">
+                            <option value ="IE">
+                            <option value ="Chrome">
+                            <option value ="Safari">
+
+                        </datalist>
+                    </td>
+                </tr>
+
+            </table>
+
+            <br><br>
+
+            <input type ="submit" name="submit" value ="sign up">
+            
+            <br><br>
+
+            <input type="button" name="btn1" value ="click me" onclick="alert('Button Clicked')";>
+
+            <fieldset>
+                <legend>personal information</legend>
+                <label for="uname">User Name:</label>
+                <input type="text" id="uname" name="uname" placeholder="enter user name" />
+                <label for="add">Address:</label>
+                <textarea id="add"></textarea>
+            </fieldset>
+            
+        </form>
+        <hr>
+        <h4>8  &lt; 12</h4>
+        <h4 id="amt">You owe me &dollar;500 </h4>
+        <h4>&copy;2020-2022 Mars </h4>
+        <h4>&reg;</h4>
+        <p>
+            Lion: <span style="font-size: 100px"> &#129409;</span></p>
+        </p>
+        <hr>
+        <iframe src = "home.html" width="600" height="400" name="myFrame" ></iframe>
+
+        <p>
+            <a href="https://getreturnship.com/" target="myFrame">Open Mars Returnship</a>
+        </p>
+
+        <div class="fontstyle">
+            This sectionis for the fonts
+        </div>
+        
+        <br><br><br><br><br>
+
+    </body>
+</html>
