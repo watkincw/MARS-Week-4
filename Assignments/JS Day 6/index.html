@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>    
+
+    <title>Employee Salary</title>
+</head>
+<body>
+    <form action="employeePay.html" method="post">
+        <table border="1">
+
+            <h1 class="tableCap">
+                Employee Info Form
+            </h1>
+
+            <!-- Name -->
+            <tr>
+                <td>
+                    <label for="employeeName">Name: </label>
+                </td>
+                <td>
+                    <input type="text" id="employeeName" required>
+                </td>
+            </tr>
+
+            <!-- Employee ID -->
+            <tr>
+                <td>
+                    <label for="empId">Employee ID: </label>
+                </td>
+                <td>
+                    <input type="number" id="empId" required>
+                </td>
+            </tr>
+
+            <!-- Date Hired -->
+            <tr>
+                <td>
+                    <label for="hireDate">Date Hired: </label>
+                </td>
+                <td>
+                    <input type="date" id="hireDate" required>
+                </td>
+            </tr>
+
+            <!-- Hours Worked -->
+            <tr>
+                <td>
+                    <label for="hoursWorked">Hours Worked: </label>
+                </td>
+                <td>
+                    <input type="number" id="hoursWorked" required>
+                </td>
+            </tr>
+
+            <!-- Job Role -->
+            <tr>
+                <td>
+                    <label for="jobRole">Job Role: </label>
+                </td>
+                <td>
+                    <select id="jobRole" required>
+                        <option value="manager">Manager</option>
+                        <option value="consultant">Consultant</option>
+                        <option value="trainee">Trainee</option>
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+        <button id="submitBtn" type="submit" onclick="formData()">Submit</button>
+    </form>
+
+    <br><br>
+</body>
+</html>
