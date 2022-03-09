@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="global.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <title>jQuery Practice</title>
+</head>
+<body>
+    <h1>Home page</h1>
+
+    <p>Wait...</p>
+
+    <button>Click</button>
+
+    <script>
+        // jQuery Practice
+        $(document).ready(function() {
+            setTimeout(function() {
+                $('p').text('jQuery in action on load with a 3 second delay, using a "setTimeout()"');
+            }, 3000)
+        });
+        $('button').click(function() {
+            $('p').slideToggle();
+        });
+
+        // asynchronous
+        // second will display after third because the entire function runs constantly. 
+        // 'setTimout' delays the action by the time set
+        // but the function does not wait for it to finish before it continues to run the rest of the function
+        // meaning the delays process is running while the rest of the function runs as well
+        let testFunc = () => {
+            console.log('first');
+            setTimeout(() => console.log('second'), 2000);
+            console.log('third');
+        };
+        testFunc();
+    </script>
+    
+</body>
+</html>
